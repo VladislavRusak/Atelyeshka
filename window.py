@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import *
 # from queries import addOrder
 
 from windows.addOrder import *
-from windows.addOrder import *
+from windows.orderList import *
 
 
 class MainWindow(QWidget):
@@ -44,9 +44,9 @@ class MainWindow(QWidget):
         # TODO: приконектить к ф-циям адресации
         butt1.released.connect((self.openAddForm))
         butt2.released.connect((self.openOrdersList))
-        butt3.released.connect((self.openProcessedOrders))
-        butt4.released.connect((self.openFinishedOrders))
-        butt5.released.connect((self.openCustomers))
+        # butt3.released.connect((self.openProcessedOrders))
+        # butt4.released.connect((self.openFinishedOrders))
+        # butt5.released.connect((self.openCustomers))
 
     def resizeEvent(self, event):
         QWidget.resizeEvent(self, event)

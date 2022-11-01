@@ -4,12 +4,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from main import db
-
-
-def check_bd():
-    pass  # TODO: путь к сервис-файлу от бд
-
 
 class AddFormWindow(QWidget):
     signal = pyqtSignal(str)
@@ -54,10 +48,9 @@ class AddFormWindow(QWidget):
         # phone_num.released.connect(add)
         # things.released.connect(add)
         # service.released.connect(add)
-        add_b.released.connect(add)
+        add_b.released.connect(self.add)
 
         self.setLayout(self.layout)
 
-
-def add(full_name, phone_num, things, service):
-    print(full_name, phone_num, things, service)
+    def add(full_name, phone_num, things, service):
+        print(full_name, phone_num, things, service)

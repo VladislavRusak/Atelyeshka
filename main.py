@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QApplication
 from window import *
 
 from db.service import service
-db = service()
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
